@@ -66,3 +66,7 @@ SEO：AI 治理平台、AI Governance、模型风险管理、AI 系统台账、�
 ## 人工监督就绪度
 
 新增 `POST /api/aigov/insights/human-oversight-readiness`。面向高影响 AI 场景，检查人工复核、可解释性、持续监控、回滚机制和责任人配置，形成监督完备度评分并返回 `APPROVE`、`REVIEW` 或 `BLOCK`，用于上线评审和治理证据留存。
+
+## 企业级 AI 用例生产审批
+
+新增 `POST /api/enterprise/aigov/use-case-production-approval`，覆盖风险分级、影响评估、模型卡、评测、公平性、人工监督、监控、回滚与供应商风险，返回 `APPROVE / CONDITIONAL / BLOCKED`。详见 [AI 用例审批说明](docs/ENTERPRISE_AI_USE_CASE_APPROVAL.md)。
