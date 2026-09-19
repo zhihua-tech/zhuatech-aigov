@@ -6,11 +6,20 @@ import cn.zhuatech.aigov.service.HumanOversightReadinessService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/aigov/insights")
 public class HumanOversightReadinessController {
     private final HumanOversightReadinessService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public HumanOversightReadinessController(HumanOversightReadinessService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/human-oversight-readiness")
     public ApiResponse<HumanOversightReadinessService.Result> evaluate(
         @Valid @RequestBody HumanOversightReadinessService.Request request) {

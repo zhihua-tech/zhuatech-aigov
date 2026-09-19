@@ -6,11 +6,20 @@ import cn.zhuatech.aigov.service.AiUseCaseProductionApprovalService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/aigov")
 public class AiUseCaseProductionApprovalController {
     private final AiUseCaseProductionApprovalService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public AiUseCaseProductionApprovalController(AiUseCaseProductionApprovalService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/use-case-production-approval")
     public ApiResponse<AiUseCaseProductionApprovalService.Assessment> assess(
             @Valid @RequestBody AiUseCaseProductionApprovalService.Request request) {

@@ -5,15 +5,24 @@ import cn.zhuatech.aigov.service.HumanOversightReadinessService;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class HumanOversightReadinessServiceTests {
     private final HumanOversightReadinessService service = new HumanOversightReadinessService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void blocksHighImpactAutomationWithoutOversight() {
         var result = service.evaluate(new HumanOversightReadinessService.Request(
             "CREDIT-DECISION", 5, true, false, false, true, false, true, true));
         assertEquals("BLOCK", result.decision());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void approvesGovernedAssistiveUseCase() {
         var result = service.evaluate(new HumanOversightReadinessService.Request(
             "KNOWLEDGE-ASSIST", 2, false, true, true, true, true, true, true));

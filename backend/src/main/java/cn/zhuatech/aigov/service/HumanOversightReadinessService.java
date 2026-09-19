@@ -9,8 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class HumanOversightReadinessService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int score = 100;
         if (request.automatedDecision() && !request.humanReviewEnabled()) score -= 35;
@@ -33,10 +39,16 @@ public class HumanOversightReadinessService {
         return new Result(request.useCaseCode(), score, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String useCaseCode, @Min(1) @Max(5) int impactLevel,
                           boolean automatedDecision, boolean humanReviewEnabled,
                           boolean explainabilityAvailable, boolean monitoringEnabled,
                           boolean rollbackReady, boolean accountableOwnerAssigned,
                           boolean dataProtectionAssessmentComplete) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String useCaseCode, int readinessScore, String decision, List<String> actions) {}
 }
