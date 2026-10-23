@@ -84,3 +84,9 @@ SEO：AI 治理平台、AI Governance、模型风险管理、AI 系统台账、�
 ## 企业级 AI 用例生产审批
 
 新增 `POST /api/enterprise/aigov/use-case-production-approval`，覆盖风险分级、影响评估、模型卡、评测、公平性、人工监督、监控、回滚与供应商风险，返回 `APPROVE / CONDITIONAL / BLOCKED`。详见 [AI 用例审批说明](docs/ENTERPRISE_AI_USE_CASE_APPROVAL.md)。
+
+## 输入对照与版本化快照
+
+在既有「AI应用评估版本与整改关闭」基础上，新增 `/comparison.html`：基准与候选两组数据都由当前真实算法重算，按编号展示新增、移除、逐字段变化和精确数值差，支持筛选、分页和全量导出。原核算入口可导出输入快照，对照页经后端完整校验后整体导入；失败不覆盖当前输入。
+
+快照区分项目、字段契约及算法版本。建议较宽松不代表风险已下降，输入摘要不是签名；操作人和时间仅为响应元数据，不是持久化审计。本次未新增模型调用或业务写入，也不代表全系统生产认证。详见[输入对照操作与接口说明](docs/INPUT-COMPARISON.md)。

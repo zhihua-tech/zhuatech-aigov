@@ -1,0 +1,80 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  },
+  {
+    "patch": {
+      "deployedRevision": "6"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  },
+  {
+    "patch": {
+      "validUntil": "2026-10-22"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  },
+  {
+    "patch": {
+      "verified": "2"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "awaitingVerification": "#1"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  },
+  {
+    "patch": {
+      "ownerApproved": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  },
+  {
+    "patch": {
+      "validUntil": "2026-10-23"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "highRiskOpen": "#0"
+    }
+  }
+]
